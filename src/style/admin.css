@@ -1,0 +1,106 @@
+/* admin.css */
+.admin-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2d3436;
+    margin-bottom: 2rem;
+  }
+  
+  .title-icon {
+    font-size: 1.5em;
+  }
+  
+  .analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  
+  .metric-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  
+  .metric-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #c62828;
+  }
+  
+  .chart-container {
+    height: 200px;
+  }
+  
+  .top-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background: #fffaf5;
+    border-radius: 8px;
+  }
+  
+  .inventory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .inventory-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  
+  .demand-bar {
+    width: 150px;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .demand-fill {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: #c62828;
+    border-radius: 4px;
+  }
+  
+  .stock-fill {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: #ffab91;
+    border-radius: 4px;
+    opacity: 0.7;
+  }
+  
+  .demand-percent {
+    font-weight: 600;
+    color: #c62828;
+  }
+  
+  @media (max-width: 768px) {
+    .analytics-grid {
+      grid-template-columns: 1fr;
+    }
+  }

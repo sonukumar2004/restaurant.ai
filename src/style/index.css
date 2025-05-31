@@ -1,0 +1,85 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Notification */
+  .notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from { transform: translate(-50%, 100%); }
+    to { transform: translate(-50%, 0); }
+  }
+  
+  /* Cart Page */
+  .cart-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cart-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .checkout-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    transition: transform 0.2s;
+  }
+  
+  .checkout-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Existing dish cards styles */
+  .dish-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .dish-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .quick-add-btn {
+    background: #2d2d2d;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .quick-add-btn:hover {
+    background: #4d4d4d;
+  }

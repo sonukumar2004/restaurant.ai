@@ -1,0 +1,244 @@
+
+:root {
+    --primary-color: #584143;
+    --dark-color: #1A1A1A;
+    --light-color: #201d1d;
+    --hover-color: #9239e6;
+    --shadow-color: rgba(143, 43, 43, 0.1);
+  }
+  
+  .navbar {
+    background: blue(--light-color);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    position: relative;
+    width: 100%;
+    
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+  
+  .logo-text {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .location-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+  }
+  
+  .dropdown-icon {
+    font-size: 0.6rem;
+    margin-top: 2px;
+  }
+  
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--hover-color);
+  }
+  
+  .auth-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .auth-link {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .auth-link:hover {
+    color: var(--hover-color);
+  }
+  
+  .auth-btn {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    /* transition: background 0.3s ease; */
+  }
+  
+  .auth-btn:hover {
+    background: var(--hover-color);
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-color);
+  }
+  
+  .mobile-nav {
+    display: none;
+    background: var(--light-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      padding: 1rem;
+    }
+  
+    .desktop-nav {
+      display: none;
+    }
+  
+    .mobile-menu-toggle {
+      display: block;
+    }
+  
+    .mobile-nav {
+      display: block;
+      animation: slideDown 0.3s ease-out;
+    }
+  
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .mobile-auth {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /* Location Selector Styles */
+.location-selector {
+  position: relative;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.current-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--dark-color);
+}
+
+.locations-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 0.5rem;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.location-item {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.location-item:hover {
+  background: #f5f5f5;
+}
+
+/* Mobile Location Selector */
+.mobile-location-selector {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-locations-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Add these to your media queries */
+@media (max-width: 768px) {
+  .location-selector {
+    display: none;
+  }
+  
+  .mobile-location-selector {
+    display: block;
+  }
+}
+/* Add these styles to your navbar CSS */
+.home-icon {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
